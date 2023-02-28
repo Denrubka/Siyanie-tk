@@ -93,7 +93,10 @@ body {
     line-height: 1;
     font-weight: 400;
     color: #000;
-    overflow-X: hidden;
+}
+.page-wrapper {
+    position: relative;
+    overflow: hidden;
 }
 body::-webkit-scrollbar-button {
     background-image:url('');
@@ -132,21 +135,21 @@ body::-webkit-scrollbar{
     padding-right: 0;
 }
 
-.hero {
+.hero__wrapper {
     padding-bottom: 170px;
 }
-.page-about .hero {
+.page-about .hero__wrapper {
     padding-bottom: 240px;
 }
-.page-drivers .hero {
+.page-drivers .hero__wrapper {
     padding-bottom: 190px;
 }
-.page-partners .hero {
+.page-partners .hero__wrapper {
     padding-bottom: 330px;
 }
 .hero__wrapper {
     max-width: 1464px;
-    margin: 0 auto;
+    margin: 0 auto 70px auto;
     position: relative;
 }
 .hero__wrapper-bg {
@@ -156,6 +159,14 @@ body::-webkit-scrollbar{
     bottom: 0;
     left: 0;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.hero__wrapper-bg-white {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
 }
 .hero__wrapper-map {
@@ -441,6 +452,7 @@ body::-webkit-scrollbar{
     position: absolute;
     bottom: -170px;
     right: 0;
+    z-index: -1;
 }
 .page-about .hook-right {
     bottom: -90px;
@@ -617,7 +629,7 @@ body::-webkit-scrollbar{
     font-size: 22px;
     text-align: center;
     display: block;
-    min-height: 44px;
+    min-height: 53px;
     line-height: 1.2;
 }
 .counter__list .card__img {
@@ -1774,6 +1786,743 @@ body::-webkit-scrollbar{
     font-size: 24px;
     color: #171d31;
     line-height: 1.2;
+}
+.burger-wrapper {
+    height: 100%;
+}
+.burger {
+    width: 35px;
+    height: 25px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+}
+.burger__line::before, .burger__line::after {
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    background: #000;
+    right: 0;
+}
+.burger__line::before {
+    width: 28px;
+    top: 0;
+}
+.burger__line::after {
+    bottom: 0;
+    width: 100%;
+}
+.burger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: flex-end;
+}
+.burger-menu.show {
+    display: flex;
+}
+.burger-menu__wrapper {
+    max-width: 300px;
+    width: 100%;
+    background: #fff;
+    border-left: 1px solid #1785c0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.burger-menu__list {
+    display: flex;
+    flex-direction: column;
+}
+.burger-menu__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+.burger-menu__item {
+    position: relative;
+    width: fit-content;
+}
+.burger-menu__item.active .header-menu__link {
+    color: #1785c0;
+}
+.burger-menu__list .header-menu__link {
+    font-size: 18px;
+}
+.burger-menu__item::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    background: #1785c0;
+    transition: all .3s linear;
+}
+.burger-menu__item.active::after {
+    width: 100%;
+}
+.burger-menu__item:hover .header-menu__link {
+    color: #1785c0;
+}
+.burger-menu__item:hover::after {
+    width: 100%;
+}
+.burger-menu__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.burger-menu__close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: rotate(-45deg);
+}
+.burger-menu__close-line::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transform: rotate(90deg);
+}
+
+
+@media (max-width: 1690px) {
+    .benefits__img {
+        left: -50px;
+        max-width: 540px;
+    }
+    .benefits {
+        background: url(../img/benefits-left-bg.png) no-repeat left -106px top -239px / 650px;
+    }
+}
+@media (max-width: 1450px) {
+    .hero-content__img {
+        max-width: 500px;
+    }
+}
+@media (max-width: 1400px) {
+    .medical-img {
+        max-width: 420px;
+    }
+    .medical {
+        background: url(../img/medical-bg.png)no-repeat top right / 480px;
+    }
+    .medical-bage {
+        left: -200px;
+    }
+}
+@media (max-width: 1350px) {
+    .hero-content__img {
+        top: 50px;
+    }
+}
+@media (max-width: 1280px) {
+    .benefits__img {
+        left: 20px;
+        max-width: 450px;
+    }
+}
+@media (max-width: 1199px) {
+    .header-nav__top-item:not(:last-of-type) {
+        margin-right: 40px;
+    }
+    .hero-content__img {
+        max-width: 380px;
+        top: 80px;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .subtitle {
+        font-size: 30px;
+    }
+    .board-title {
+        max-width: 380px;
+    }
+    .board-title span {
+        font-size: 40px;
+    }
+    .hero__wrapper {
+        padding-bottom: 130px;
+    }
+    .hero__wrapper-map {
+        right: -400px;
+    }
+    .main-about__title {
+        font-size: 40px;
+    }
+    .main-about__subtitle {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .block-left__text {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    .main-about__corp-text {
+        font-size: 16px;
+    }
+    .main-about__corp-img {
+        max-width: 130px;
+        height: 100%;
+    }
+    .block-right__title {
+        font-size: 25px;
+    }
+    .block-right__title::before {
+        height: 40px;
+    }
+    .main-about__left-list {
+        margin-left: 0;
+    }
+    .main-about__left-list .list__item-img__wrapper {
+        width: 30px;
+    }
+    .list__item-img {
+        width: 100%;
+        max-width: 30px;
+        height: 100%;
+    }
+    .main-about__left-list .list__item-text {
+        font-size: 17px;
+    }
+    .hook-right {
+        max-width: 450px;
+        bottom: -110px;
+    }
+    .counter__title {
+        font-size: 40px;
+    }
+    .counter__subtitle {
+        font-size: 20px;
+    }
+    .counter__list .card__title {
+        font-size: 36px;
+    }
+    .counter__list .card__text {
+        font-size: 20px;
+        min-height: 48px;
+    }
+    .counter__list .card__img {
+        width: 70px;
+        height: 72px;
+        top: -35px;
+    }
+    .counter__list {
+        justify-content: center;
+    }
+    .counter__list .card:not(:last-child) {
+        margin-right: 20px;
+    }
+    .benefits {
+        padding-top: 60px;
+        background: url(../img/benefits-left-bg.png) no-repeat left -106px top -239px / 480px;
+    }
+    .benefits__img {
+        position: static;
+    }
+    .benefits .block-left {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 90px;
+    }
+    .benefits .section__title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .benefits .section__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .benefits__subtitle {
+        font-size: 21px;
+        text-align: center;
+    }
+    .benefits__text {
+        text-align: center;
+    }
+    .benefits .list__title {
+        width: fit-content;
+        margin: 0 auto 30px auto;
+        text-align: center;
+    }
+    .benefits .list {
+        max-width: 525px;
+        margin: 0 auto 30px auto;
+    }
+    .page-main .benefits .block-right {
+        padding-left: 12px;
+    }
+    .benefits {
+        padding-bottom: 100px;
+    }
+    .medical .row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .medical-img {
+        position: static;
+        margin-bottom: 30px;
+    }
+    .medical-bage {
+        position: static;
+    }
+    .medical-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    .medical .section__title {
+        text-align: center;
+    }
+    .medical .list__item {
+        flex-direction: column;
+    }
+    .medical .list__item-text {
+        max-width: 400px;
+        text-align: center;
+    }
+    .medical .list__item-text br {
+        display: none;
+    }
+    .medical__text {
+        width: fit-content;
+        margin: 0 auto 30px auto;
+    }
+    .medical .list__item-img {
+        max-width: 50px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .medical .section__title {
+        font-size: 40px;
+    }
+    .medical__text {
+        font-size: 20px;
+    }
+    .medical .list__item-text {
+        font-size: 20px;
+    }
+    .section__title {
+        font-size: 40px;
+    }
+    .main-map .section__title {
+        margin-bottom: 10px;
+    }
+    .main-map__text {
+        font-size: 20px;
+    }
+    .footer-wrapper {
+        padding-bottom: 0;
+    }
+    .footer-wrapper {
+        margin: 0;
+    }
+}
+@media (max-width: 991px) {
+    .container {
+        max-width: 100%;
+    }
+    .header__wrapper {
+        margin: 0;
+    }
+    .header-nav__top-item:not(:last-of-type) {
+        margin-right: 20px;
+    }
+    .header-menu__item:not(:last-of-type) {
+        margin-right: 20px;
+    }
+    .header-nav__top-link, .header-nav__top-span {
+        font-size: 14px;
+    }
+    .header-menu__link {
+        font-size: 14px;
+    }
+    .logo-link {
+        max-width: 100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-about .block-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    .main-about__title {
+        text-align: center;
+    }
+    .main-about__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .main-about__subtitle {
+        text-align: center;
+    }
+    .main-about .block-left .block-left__text {
+        text-align: center;
+    }
+    .main-about .block-right__title {
+        width: fit-content;
+        text-align: center;
+        margin: 0 auto 50px auto;
+    }
+    .main-about__left-list {
+        max-width: 550px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .main-about__left-list .list__item {
+        max-width: 235px;
+    }
+    .hook-right {
+        max-width: 360px;
+    }
+    .footer .info {
+        padding-bottom: 0;
+    }
+    .footer-wrapper {
+        padding-bottom: 50px;
+    }
+    .info-address__text br {
+        display: none;
+    }
+}
+@media (max-width: 950px) {
+    .hero-content__img {
+        display: none;
+    }
+    .hero__wrapper-map {
+        right: -270px;
+        max-width: 700px;
+    }
+}
+@media (max-width: 900px) {
+
+}
+@media (max-width: 850px) {
+    .burger {
+        display: flex;
+    }
+    .header-nav__bottom {
+        display: none;
+    }
+    .header-nav__top-wrapper {
+        display: none;
+    }
+    .header__wrapper .col-md-10 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .header__wrapper {
+        padding: 10px 15px;
+    }
+    .header .logo {
+        padding-top: 0;
+    }
+    .logo img {
+        width: 100%;
+        height: 100%;
+    }
+    .logo-link {
+        margin: 0;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 780px) {
+    .counter__subtitle {
+        font-size: 18px;
+    }
+    .counter__list .card__title {
+        font-size: 30px;
+    }
+    .counter__list .card {
+        padding: 50px 15px 16px 15px;
+    }
+    .counter__list .card:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .counter__list {
+        flex-direction: column;
+    }
+    .medical {
+        padding-top: 0;
+        background: url(../img/medical-bg.png)no-repeat top right / 360px;
+    }
+}
+@media (max-width: 767px) {
+    .footer-links {
+        align-items: flex-start;
+    }
+    .footer-links__tel {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .info-title, .info-subtitle {
+        font-size: 16px;
+    }
+    .info-address__text {
+        font-size: 16px;
+    }
+}
+@media (max-width: 730px) {
+
+}
+@media (max-width: 630px) {
+    .title {
+        font-size: 35px;
+    }
+    .subtitle {
+        font-size: 25px;
+    }
+    .board-title span {
+        font-size: 35px;
+    }
+    .board-title {
+        max-width: 335px;
+    }
+    .list-icons__icon-img {
+        max-width: 40px;
+    }
+    .list-icons__icon-img img {
+        width: 100%;
+    }
+    .list-icons__icon-text {
+        font-size: 16px;
+    }
+    .main-about__title {
+        font-size: 35px;
+    }
+    .main-about__subtitle {
+        font-size: 20px;
+    }
+    .block-left__text {
+        font-size: 18px;
+    }
+    .counter__title {
+        font-size: 35px;
+    }
+    .counter__subtitle br {
+        display: none;
+    }
+    .benefits__img {
+        max-width: 360px;
+    }
+    .benefits {
+        background: url(../img/benefits-left-bg.png) left -106px top -239px / 380px no-repeat;
+    }
+    .benefits .section__title {
+        font-size: 35px;
+    }
+    .benefits__subtitle {
+        font-size: 19px;
+    }
+    .benefits__text {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
+    .benefits .list__title {
+        font-size: 22px;
+    }
+    .benefits .list__title::before {
+        height: 30px;
+    }
+    .benefits .list__item-text {
+        font-size: 19px;
+    }
+    .benefits .list {
+        max-width: 460px;
+    }
+    .medical-img {
+        max-width: 360px;
+    }
+    .medical .section__title {
+        font-size: 30px;
+    }
+    .medical__text {
+        font-size: 18px;
+    }
+    .medical .list__item-text {
+        font-size: 18px;
+    }
+    .section__title {
+        font-size: 35px;
+    }
+    .main-map__text {
+        font-size: 18px;
+    }
+    .footer-wrapper .col-6 {
+        width: 100%;
+    }
+    .footer-nav {
+        align-items: center;
+        margin-top: 50px;
+    }
+    .footer-wrapper .info {
+        margin-top: 50px;
+    }
+    .info-title, .info-subtitle {
+        text-align: center;
+    }
+    .info-address {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-address__text {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .footer-links {
+        align-items: center;
+    }
+}
+@media (max-width: 600px) {
+    .medical__text br {
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .benefits .section__title {
+        font-size: 30px;
+    }
+    .benefits__subtitle {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .benefits .list__title {
+        font-size: 19px;
+    }
+    .benefits .list__item-text {
+        font-size: 18px;
+    }
+    .benefits br {
+        display: none;
+    }
+    .benefits .list__title {
+        max-width: 282px;
+    }
+    .medical {
+        background: url(../img/medical-bg.png)no-repeat top right / 260px;
+    }
+    .medical-img {
+        max-width: 290px;
+    }
+    .medical-bage {
+        max-width: 150px;
+    }
+    .main-map {
+        padding-bottom: 50px;
+    }
+}
+@media (max-width: 540px) {
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 20px;
+        text-align: center;
+    }
+    .board-title span {
+        font-size: 30px;
+        padding: 7px 10px;
+    }
+    .board-title {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 280px;
+    }
+    .list-icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .list-icons__icon-img {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .list-icons__icon-text {
+        text-align: center;
+    }
+    .list-icons__icon {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-about__title {
+        font-size: 30px;
+    }
+    .main-about__subtitle {
+        font-size: 18px;
+    }
+    .block-left__text {
+        font-size: 16px;
+    }
+    .main-about__corp {
+        flex-direction: column;
+    }
+    .main-about__corp-img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .main-about__corp-text {
+        text-align: center;
+    }
+    .counter__title {
+        font-size: 30px;
+    }
+    .section__title {
+        font-size: 30px;
+    }
+}
+@media (max-width: 460px) {
+    .main-about__left-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-about__left-list .list__item {
+        width: 100%;
+    }
+    br {
+        display: none;
+    }
+    .main-about .block-right__title br {
+        display: block;
+    }
+    .hook-right {
+        max-width: 290px;
+        bottom: -80px;
+    }
 }
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
