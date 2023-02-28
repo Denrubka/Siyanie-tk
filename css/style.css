@@ -160,6 +160,7 @@ body {
     font-size: 18px;
     display: block;
     line-height: 1.2;
+    margin-top: 5px;
 }
 .header {
     position: relative;
@@ -425,6 +426,9 @@ body {
     text-transform: uppercase;
     margin-bottom: 15px;
 }
+.page-drivers .main-about__title, .page-contacts .main-about__titlem .page-about .main-about__title {
+    color: #1785c0;
+}
 .title-stars {
     position: relative;
 }
@@ -450,7 +454,7 @@ body {
     color: #171d31;
     font-size: 22px;
     margin-bottom: 46px;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 .main-about__corp {
     display: flex;
@@ -511,8 +515,11 @@ body {
     display: block;
     line-height: 1.2;
 }
+.list__item-text {
+    line-height: 1.2;
+}
 .counter {
-    padding: 65px 0 60px 0;
+    padding: 58px 0;
     background: #1785c0 url("../img/counter-map.png")no-repeat center;
     position: relative;
     z-index: 4;
@@ -545,6 +552,7 @@ body {
     text-align: center;
     display: block;
     margin-bottom: 45px;
+    line-height: 1.2;
 }
 .counter__list {
     display: flex;
@@ -580,6 +588,7 @@ body {
     text-align: center;
     display: block;
     min-height: 44px;
+    line-height: 1.2;
 }
 .counter__list .card__img {
     position: absolute;
@@ -773,9 +782,10 @@ body {
 .page-about .benefits .list__item {
     display: flex;
     justify-content: space-between;
+    max-width: 510px;
 }
 .page-about .benefits .list__item:not(:last-of-type) {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .page-about .benefits .list__item-title {
     position: relative;
@@ -943,6 +953,7 @@ body {
     font-size: 24px;
     color: #1785c0;
     margin: 0;
+    line-height: 1.2;
 }
 .notice__text strong {
     font-family: "AGLETLB", sans-serif;
@@ -1133,9 +1144,11 @@ body {
     text-align: center;
     line-height: 1.2;
     font-family: "AGLETCB", sans-serif;
+    margin-top: 10px;
 }
 .equipment-info-block__text strong {
     font-family: "AGLETLB", sans-serif;
+    color: #1785c0;
 }
 .equipment .notice__text strong {
     font-family: "AGLETLR", sans-serif;
@@ -1144,7 +1157,7 @@ body {
     line-height: 1.2;
 }
 .equipment .notice {
-    padding: 35px 15px;
+    padding: 15px;
 }
 .page-drivers .checklist .section__title {
     text-align: left;
@@ -1222,8 +1235,11 @@ body {
     text-transform: uppercase;
 }
 .reasons-text-center .text-light {
-    font-size: 60px;
+    font-size: 48px;
     color: #c2e5ff !important;
+}
+.reasons-text-center .text-light .text-number {
+    font-size: 60px;
 }
 .reasons-text {
     position: absolute;
@@ -1233,6 +1249,7 @@ body {
     text-align: center;
     display: block;
     text-transform: uppercase;
+    line-height: 1.2;
 }
 .reasons-text1 {
     left: 40px;
@@ -1378,6 +1395,9 @@ body {
     left: -304px;
     z-index: -1;
 }
+.cta .block-left__text {
+    line-height: 1.2;
+}
 .reviews .section__title {
     text-align: center;
 }
@@ -1445,9 +1465,13 @@ body {
     flex-direction: column;
 }
 .reviews-info__tels a {
-    font-size: 24px;
+    font-size: 30px;
     color: #1785c0;
     font-family: "AGLETLB", sans-serif;
+    transition: all .3s linear;
+}
+.reviews-info__tels a:hover {
+    color: #58acdf;
 }
 .reviews-info__tels a:not(:last-of-type) {
     margin-bottom: 10px;
@@ -1469,6 +1493,7 @@ body {
 }
 .page-partners .counter__list .card__title {
     font-size: 24px;
+    text-transform: uppercase;
 }
 .page-partners .counter__list .card__text {
     font-size: 18px;
@@ -1503,7 +1528,7 @@ body {
     display: block;
     font-family: "AGLETLB", sans-serif;
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-left: 20px;
 }
 .page-partners .reviews-info__tels {
@@ -1617,10 +1642,12 @@ body {
 .contacts-list__link {
     display: flex;
     align-items: center;
-}
-.contacts-list__link {
     font-size: 36px;
     color: #1785c0;
+    transition: all .3s linear;
+}
+.contacts-list__link:hover {
+    color: #44789e;
 }
 .page-contacts .form-label {
     flex-direction: column;
