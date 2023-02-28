@@ -98,6 +98,9 @@ body {
 .text-blue {
     color: #58acdf;
 }
+.pr-0 {
+    padding-right: 0;
+}
 
 .hero {
     padding-bottom: 170px;
@@ -447,6 +450,7 @@ body {
     color: #171d31;
     font-size: 22px;
     margin-bottom: 46px;
+    line-height: 1.2;
 }
 .main-about__corp {
     display: flex;
@@ -504,8 +508,8 @@ body {
 }
 .main-about__left-list .list__item-text {
     font-size: 18px;
-    line-height: 1;
     display: block;
+    line-height: 1.2;
 }
 .counter {
     padding: 65px 0 60px 0;
@@ -589,7 +593,7 @@ body {
     font-size: 48px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 1;
+    line-height: 1.2;
     margin-bottom: 25px;
 }
 .benefits__subtitle {
@@ -643,6 +647,7 @@ body {
 .benefits .list__item-text {
     color: #44789e;
     font-size: 24px;
+    line-height: 1.2;
 }
 .benefits {
     position: relative;
@@ -727,6 +732,7 @@ body {
     color: #6c6c6c;
     font-size: 22px;
     text-align: center;
+    line-height: 1.2;
 }
 .main-map__img {
     width: 100%;
