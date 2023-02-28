@@ -197,6 +197,9 @@ body {
     display: flex;
     align-items: center;
 }
+.header-nav__top-link:hover {
+    font-weight: 600;
+}
 .header-nav__top-img {
     margin-right: 8px;
 }
@@ -313,6 +316,9 @@ body {
 }
 .list-icons__icon-text span {
     text-decoration: underline;
+}
+.page-policy .footer {
+    margin-top: 100px;
 }
 .footer-wrapper {
     box-shadow: 0 0 1px 7px rgb(30 18 64 / 27%);
@@ -1269,6 +1275,14 @@ body {
 .form-label {
     display: flex;
     align-items: center;
+}
+.form-policy {
+    color: #131924;
+    text-decoration: underline;
+    transition: all .3s linear;
+}
+.form-policy:hover {
+    color: #58acdf;
 }
 .form-label:not(:last-of-type) {
     margin-bottom: 20px;
