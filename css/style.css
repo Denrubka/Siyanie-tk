@@ -167,7 +167,7 @@ body::-webkit-scrollbar{
 }
 .hero__wrapper-bg-white {
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: -20px;
     width: calc(100% + 20px);
 }
