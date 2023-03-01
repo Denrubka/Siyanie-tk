@@ -145,7 +145,10 @@ body::-webkit-scrollbar{
     padding-bottom: 190px;
 }
 .page-partners .hero__wrapper {
-    padding-bottom: 330px;
+    padding-bottom: 225px;
+}
+.page-partners .hero__wrapper-map {
+    top: 45%;
 }
 .hero__wrapper {
     max-width: 1464px;
@@ -1969,6 +1972,12 @@ body::-webkit-scrollbar{
     .equipment-info-block {
         left: 0;
     }
+    .page-partners .main-about__subtitle br {
+        display: none;
+    }
+    .page-partners .block-left__text br {
+        display: none;
+    }
 }
 @media (max-width: 1350px) {
     .hero-content__img {
@@ -2378,6 +2387,81 @@ body::-webkit-scrollbar{
     .cta .block-left__text {
         text-align: center;
     }
+    .page-partners .hero-content__img {
+        top: 20px;
+    }
+    .page-partners .about-hero .board-title {
+        max-width: 400px;
+    }
+    .page-partners .hero__wrapper {
+        padding-bottom: 170px;
+    }
+    .page-partners .main-about .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .page-partners .main-about__subtitle br {
+        display: block;
+    }
+    .page-partners .block-left__text br {
+        display: block;
+    }
+    .page-partners .main-about__title {
+        text-align: center;
+    }
+    .page-partners .main-about__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .page-partners .main-about__subtitle {
+        text-align: center;
+    }
+    .page-partners .block-left__text {
+        text-align: center;
+    }
+    .page-partners .main-about .list__item {
+        max-width: 480px;
+        width: 100%;
+    }
+    .page-partners .main-about .list {
+        padding-left: 0;
+        align-items: center;
+    }
+    .page-partners .main-about .row .col-12:last-child {
+        margin-bottom: 0;
+    }
+    .page-partners .main-about .hook-right {
+        bottom: -94px;
+    }
+    .partners-info .row-blocks .col-12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .partners-info .row-blocks .col-xl-5 img {
+        max-width: 300px;
+        height: 100%;
+    }
+    .partners-info .row-blocks .col-xl-5 {
+        margin-bottom: 70px;
+    }
+    .partners-info__title {
+        text-align: center;
+    }
+    .partners-info__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .partners-info__text {
+        text-align: center;
+        padding-left: 0;
+    }
+    .partners-info__tels-title {
+        padding-left: 0;
+    }
+    .page-partners .reviews-info__tels {
+        padding-left: 0;
+    }
 }
 @media (max-width: 991px) {
     .container {
@@ -2536,6 +2620,23 @@ body::-webkit-scrollbar{
     .reviews-info__title {
         text-align: center;
     }
+    .page-partners .main-about .block-left {
+        margin-bottom: 20px;
+    }
+    .page-partners .counter__list .card:not(:last-child) {
+        margin-right: 0;
+    }
+    .page-partners .counter__list .card:nth-child(1n) {
+        margin-right: 20px;
+    }
+    .page-partners .counter__list .card:nth-child(1), .page-partners .counter__list .card:nth-child(2) {
+        margin-bottom: 50px;
+    }
+    .page-partners .counter__list {
+        flex-wrap: wrap;
+        max-width: 495px;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 950px) {
     .hero-content__img {
@@ -2612,6 +2713,10 @@ body::-webkit-scrollbar{
         padding-top: 0;
         background: url(../img/medical-bg.png)no-repeat top right / 360px;
     }
+    .page-partners .counter__list .card:nth-child(1n) {
+        margin-right: 0;
+    }
+
 }
 @media (max-width: 767px) {
     .footer-links {
@@ -2874,6 +2979,16 @@ body::-webkit-scrollbar{
     .checklist__subtitle br {
         display: none;
     }
+    .page-partners .hero__wrapper {
+        padding-bottom: 110px;
+    }
+    .page-partners .about-hero .board-title {
+        max-width: 360px;
+    }
+    .page-partners .main-about .list__item {
+        font-size: 18px;
+        max-width: 400px;
+    }
 }
 @media (max-width: 600px) {
     .medical__text br {
@@ -3018,6 +3133,15 @@ body::-webkit-scrollbar{
     .cta .form-label__input {
         max-width: 100%;
     }
+    .page-partners .notice {
+        align-items: center;
+    }
+    .partners-info__text br {
+        display: none;
+    }
+    .partners-info__title br {
+        display: none;
+    }
 }
 @media (max-width: 540px) {
     .title {
@@ -3085,6 +3209,9 @@ body::-webkit-scrollbar{
     .page-drivers .about-hero .board-title {
         max-width: 272px;
     }
+    .page-partners .about-hero .board-title {
+        max-width: 300px;
+    }
 }
 @media (max-width: 500px) {
     .counter__images {
@@ -3146,6 +3273,12 @@ body::-webkit-scrollbar{
     .reviews-info__tels a img {
         width: 27px;
         height: 27px;
+    }
+    .page-partners .block-left__text br {
+        display: none;
+    }
+    .page-partners .main-about__subtitle br {
+        display: none;
     }
 }
 @media (max-width: 350px) {
