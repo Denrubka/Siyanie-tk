@@ -1686,6 +1686,7 @@ body::-webkit-scrollbar{
     align-items: center;
     margin-right: 15px;
     height: fit-content;
+    flex-shrink: 0;
 }
 .contacts-list__link {
     display: flex;
@@ -1786,7 +1787,7 @@ body::-webkit-scrollbar{
     margin-bottom: 60px;
 }
 .policy__title {
-
+    font-family: "AGLETCB", sans-serif;
 }
 .policy__text {
     font-size: 24px;
@@ -1933,6 +1934,10 @@ body::-webkit-scrollbar{
 @media (max-width: 1450px) {
     .hero-content__img {
         max-width: 500px;
+    }
+    .page-services .hero-content__img {
+        max-width: 460px;
+        max-height: 385px;
     }
 }
 @media (max-width: 1400px) {
@@ -2462,6 +2467,86 @@ body::-webkit-scrollbar{
     .page-partners .reviews-info__tels {
         padding-left: 0;
     }
+    .page-services .about-hero .board-title {
+        max-width: 540px;
+    }
+    .page-services .hero-content__img {
+        max-width: 330px;
+        max-height: 296px;
+        top: 30px;
+    }
+    .page-services .main-about .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .page-services .main-about__title {
+        text-align: center;
+    }
+    .page-services .main-about__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .page-services .main-about__subtitle {
+        text-align: center;
+    }
+    .page-services .block-left__text {
+        text-align: center;
+    }
+    .page-services .main-about .row .col-12:last-child {
+        margin-bottom: 0;
+    }
+    .page-services .benefits__img {
+        max-width: 350px;
+        height: 100%;
+    }
+    .page-services .notice {
+        margin-bottom: 25px;
+    }
+    .page-services .benefits {
+        background: url(../img/benefits-left-bg.png)no-repeat top -172px left -87px / 400px;
+        padding-bottom: 30px;
+    }
+    .page-services .benefits .list__title {
+        max-width: 560px;
+        width: 100%;
+        padding-left: 20px;
+    }
+    .page-services .benefits .list__title::before {
+        left: 5px;
+    }
+    .page-contacts .about-hero .board-title {
+        max-width: 440px;
+    }
+    .page-contacts .hero-content__img {
+        top: 40px;
+        max-width: 330px;
+        height: 100%;
+    }
+    .page-contacts .contacts-form-wrapper {
+        flex-direction: column;
+    }
+    .page-contacts .main-about__title {
+        text-align: center;
+    }
+    .page-contacts .main-about__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .page-contacts .main-about__subtitle {
+        text-align: center;
+    }
+    .page-contacts .block-left__text {
+        text-align: center;
+    }
+    .contacts-list {
+        padding-left: 0;
+        max-width: 505px;
+        margin: 0 auto 20px auto;
+    }
+    #map {
+        max-width: 100% !important;
+        height: 400px !important;
+    }
 }
 @media (max-width: 991px) {
     .container {
@@ -2623,19 +2708,32 @@ body::-webkit-scrollbar{
     .page-partners .main-about .block-left {
         margin-bottom: 20px;
     }
-    .page-partners .counter__list .card:not(:last-child) {
+    .page-partners .counter__list .card:not(:last-child), .page-services .counter__list .card:not(:last-child) {
         margin-right: 0;
     }
-    .page-partners .counter__list .card:nth-child(1n) {
+    .page-partners .counter__list .card:nth-child(1n), .page-services .counter__list .card:nth-child(1n) {
         margin-right: 20px;
     }
-    .page-partners .counter__list .card:nth-child(1), .page-partners .counter__list .card:nth-child(2) {
+    .page-partners .counter__list .card:nth-child(2n), .page-services .counter__list .card:nth-child(2n) {
+        margin-right: 0;
+    }
+    .page-partners .counter__list .card:nth-child(1), .page-partners .counter__list .card:nth-child(2), .page-services .counter__list .card:nth-child(1), .page-services .counter__list .card:nth-child(2) {
         margin-bottom: 50px;
     }
-    .page-partners .counter__list {
+    .page-partners .counter__list, .page-services .counter__list {
         flex-wrap: wrap;
         max-width: 495px;
         margin: 0 auto;
+    }
+    .page-services  .main-about .block-left {
+        margin-bottom: 0;
+    }
+    .page-services .checklist-top {
+        margin-bottom: 15px;
+    }
+    #map {
+        max-width: 100% !important;
+        height: 300px !important;
     }
 }
 @media (max-width: 950px) {
@@ -2645,6 +2743,9 @@ body::-webkit-scrollbar{
     .hero__wrapper-map {
         right: -270px;
         max-width: 700px;
+    }
+    .page-contacts .hero__wrapper {
+        padding-bottom: 217px;
     }
 }
 @media (max-width: 900px) {
@@ -2713,7 +2814,7 @@ body::-webkit-scrollbar{
         padding-top: 0;
         background: url(../img/medical-bg.png)no-repeat top right / 360px;
     }
-    .page-partners .counter__list .card:nth-child(1n) {
+    .page-partners .counter__list .card:nth-child(1n), .page-services .counter__list .card:nth-child(1n) {
         margin-right: 0;
     }
 
@@ -2796,6 +2897,11 @@ body::-webkit-scrollbar{
 }
 @media (max-width: 700px) {
     .notice__text br {
+        display: none;
+    }
+}
+@media (max-width: 660px) {
+    .page-policy .section__title br {
         display: none;
     }
 }
@@ -2988,6 +3094,34 @@ body::-webkit-scrollbar{
     .page-partners .main-about .list__item {
         font-size: 18px;
         max-width: 400px;
+    }
+    .page-services .about-hero .board-title {
+        max-width: 480px;
+    }
+    .page-services .list__item-text {
+        font-size: 18px;
+    }
+    .page-services .benefits {
+        background: url(../img/benefits-left-bg.png)no-repeat top -172px left -53px / 326px;
+    }
+    .page-services .benefits__img {
+        max-width: 270px;
+    }
+    .partners-list {
+        flex-direction: column;
+    }
+    .partners-list__item:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .contacts-list__link {
+        font-size: 28px;
+    }
+    .contacts-list__item {
+        font-size: 20px;
+    }
+    .policy__text {
+        font-size: 20px;
     }
 }
 @media (max-width: 600px) {
@@ -3212,6 +3346,15 @@ body::-webkit-scrollbar{
     .page-partners .about-hero .board-title {
         max-width: 300px;
     }
+    .page-services .about-hero .board-title {
+        max-width: 405px;
+    }
+    .contacts-list__link {
+        font-size: 23px;
+    }
+    .contacts-list__item {
+        font-size: 18px;
+    }
 }
 @media (max-width: 500px) {
     .counter__images {
@@ -3280,10 +3423,32 @@ body::-webkit-scrollbar{
     .page-partners .main-about__subtitle br {
         display: none;
     }
+    .form-checkbox-label {
+        font-size: 14px;
+    }
+    .page-policy .section__title {
+        font-size: 24px;
+    }
+}
+@media (max-width: 400px) {
+    .page-services  .title {
+        font-size: 25px;
+    }
+    .page-services .board-title span {
+        font-size: 25px;
+    }
+}
+@media (max-width: 380px) {
+    .page-services .main-about .block-right__title {
+        font-size: 22px;
+    }
 }
 @media (max-width: 350px) {
     .page-about .board-title span {
         font-size: 28px;
+    }
+    .form-checkbox-label {
+        font-size: 13px;
     }
 }
 @media (min-width: 1400px) {
