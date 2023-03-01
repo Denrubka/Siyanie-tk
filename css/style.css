@@ -1974,6 +1974,9 @@ body::-webkit-scrollbar{
     .hero-content__img {
         top: 50px;
     }
+    .page-drivers .hero-content__img {
+        top: -30px;
+    }
 }
 @media (max-width: 1280px) {
     .benefits__img {
@@ -2329,6 +2332,52 @@ body::-webkit-scrollbar{
         display: flex;
         justify-content: flex-end;
     }
+    .page-drivers .about-hero .board-title {
+        max-width: 365px;
+    }
+    .page-drivers .hero-content__img {
+        top: -20px;
+        max-width: 340px;
+    }
+    .page-drivers .checklist .hook-right {
+        max-width: 340px;
+        height: 100%;
+        bottom: -136px;
+        right: -16px;
+    }
+    .cta-left {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    .cta-img {
+        margin-left: 0;
+        max-width: 240px;
+        height: 100%;
+    }
+    .cta-hook {
+        max-width: 555px;
+        height: 100%;
+        max-height: 320px;
+    }
+    .cta-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta .main-about__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .cta-form__subtext {
+        margin-left: 53px;
+    }
+    .cta-tels {
+        margin-left: 15px;
+    }
+    .cta .block-left__text {
+        text-align: center;
+    }
 }
 @media (max-width: 991px) {
     .container {
@@ -2461,6 +2510,31 @@ body::-webkit-scrollbar{
     }
     .page-about .main-about {
         padding-bottom: 0;
+    }
+    .page-drivers .hero__wrapper {
+        padding-bottom: 150px;
+        margin-bottom: 0;
+    }
+    .page-drivers .checklist .list__item-text br {
+        display: none;
+    }
+    .page-drivers .checklist .list__item-text {
+        font-size: 18px;
+    }
+    .reviews-row {
+        padding-bottom: 0;
+    }
+    .reviews-block {
+        padding-bottom: 80px;
+    }
+    .reviews-info {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews-info__title {
+        text-align: center;
     }
 }
 @media (max-width: 950px) {
@@ -2599,6 +2673,20 @@ body::-webkit-scrollbar{
     }
     .gdp-version {
         font-size: 30px;
+    }
+    .page-drivers .checklist .section__title {
+        text-align: center;
+    }
+    .page-drivers .checklist .section__title.title-stars::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .page-drivers .checklist .hook-right {
+        max-width: 267px;
+        height: 100%;
+        bottom: -44px;
+        right: -16px;
+        max-height: 300px;
     }
 }
 @media (max-width: 700px) {
@@ -2896,6 +2984,40 @@ body::-webkit-scrollbar{
     .checklist .list__item-text br {
         display: none;
     }
+    .page-drivers .checklist .list {
+        padding-left: 0;
+    }
+    .cta-tels {
+        flex-direction: column;
+    }
+    .cta-tels__item:not(:last-of-type) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    .form-label-submit {
+        margin-left: 0;
+    }
+    .cta-form__subtext {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .cta-tels {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .cta .form-label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cta .form-label__title {
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .cta .form-label__input {
+        max-width: 100%;
+    }
 }
 @media (max-width: 540px) {
     .title {
@@ -2957,6 +3079,12 @@ body::-webkit-scrollbar{
     .section__title {
         font-size: 30px;
     }
+    .page-drivers .hero__info-text br {
+        display: none;
+    }
+    .page-drivers .about-hero .board-title {
+        max-width: 272px;
+    }
 }
 @media (max-width: 500px) {
     .counter__images {
@@ -3005,6 +3133,19 @@ body::-webkit-scrollbar{
     }
     .page-about .benefits__img {
         max-height: 200px;
+    }
+    .page-drivers .hero__wrapper {
+        padding-bottom: 100px;
+    }
+    .cta .block-left__text br {
+        display: none;
+    }
+    .reviews-info__tels a {
+        font-size: 26px;
+    }
+    .reviews-info__tels a img {
+        width: 27px;
+        height: 27px;
     }
 }
 @media (max-width: 350px) {
